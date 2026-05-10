@@ -4,14 +4,24 @@ import Link from "next/link";
 
 const articles = [
   {
-    slug: "first-post",
-    title: "My First Post",
-    description: "Intro to my writing.",
+    slug: "lichess-dashboard-project",
+    title: "Lichess Dashboard Project",
+    description: "Web application created using Django which displays Lichess user information in a user-friendly dashboard format.",
   },
   {
-    slug: "nextjs-tips",
-    title: "Next.js Tips",
-    description: "Useful patterns I learned.",
+    slug: "ttc-visualizer-project",
+    title: "TTC Visualizer Project",
+    description: "Interactive map of Toronto’s TTC subway, LRT, and streetcar system. Includes current and under-construction lines ",
+  },
+  {
+    slug: "experimenting-ttc-gtfs",
+    title: "Experimenting with TTC GTFS Data in QGIS",
+    description: "Using Toronto Transit Commision GTFS data provided by the City of Toronto to answer some questions and visualize some things I've always been curious about.",
+  },
+  {
+    slug: "housing-density-analysis",
+    title: "Neighbourhood Housing Density Analysis",
+    description: "Collecting and mapping data on QGIS to analyse housing density in a Toronto dissemination area.",
   },
 ];
 
@@ -34,12 +44,12 @@ export default function PagesIndex() {
       </section>
 
       {/* Articles */}
-      <section className="mx-auto max-w-4xl px-6 pb-24">
+      <section className="mx-auto w-fit px-6 pb-24">
         <div className="space-y-6">
           {articles.map((a) => (
             <Link
               key={a.slug}
-              href={`/pages/${a.slug}`}
+              href={`/${a.slug}`}
               className="block rounded-xl border border-white/10 bg-white/5 p-6 text-center transition hover:bg-white/10"
             >
               <h2 className="text-2xl font-bold">

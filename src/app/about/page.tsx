@@ -57,6 +57,7 @@ export default function AboutPage() {
             <li>• Data Visualization</li>
             <li>• Software Engineering</li>
             <li>• Sports Analytics</li>
+            <li>• Geographic Information Systems</li>
           </ul>
         </div>
 
@@ -79,6 +80,8 @@ export default function AboutPage() {
             "Tailwind CSS",
             "Git",
             "PostgreSQL",
+            "QGIS",
+            "ArcGIS Suite",
           ].map((tech) => (
             <div
               key={tech}

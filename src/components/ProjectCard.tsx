@@ -1,10 +1,12 @@
 import { FaGithub, FaGitlab, FaExternalLinkAlt } from "react-icons/fa";
 import { SiPypi } from "react-icons/si"
+import { GrArticle } from "react-icons/gr";
 
 type ProjectCardProps = {
   title: string;
   description: string;
   tech: string;
+  article?: string;
   link?: string;
   github?: string;
   gitlab?: string;
@@ -15,6 +17,7 @@ export default function ProjectCard({
   title,
   description,
   tech,
+  article,
   link,
   github,
   gitlab,
@@ -34,7 +37,17 @@ export default function ProjectCard({
         {tech}
       </p>
 
+      
+
       <div className="mt-6 flex gap-2">
+        {article && (
+          <a
+          href={article}
+          className="mt-6 inline-block rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition hover:opacity-80">
+          <GrArticle size={20}/>
+          </a>
+        )}
+
         {link && (
           <a
           href={link}

@@ -3,6 +3,7 @@
 import ProjectCard from "@/components/ProjectCard";
 import { motion } from "framer-motion";
 import { FaGithub, FaGitlab, FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -21,6 +22,7 @@ export default function Projects() {
             title="Lichess Dashboard"
             description="Web application created using Django which displays Lichess user information in a user-friendly dashboard format."
             tech="Python • Django • Requests • Lichess API • Vercel"
+            article="/lichess-dashboard-project"
             link="https://lichess-dashboard.vercel.app"
             github="https://github.com/mbrahimi25/lichess-dashboard"
             gitlab="https://gitlab.com/mbrahimi25/lichess-dashboard"
@@ -31,6 +33,7 @@ export default function Projects() {
             description="Interactive map of Toronto’s TTC subway, LRT, and streetcar system. Includes current and under-construction lines."
             tech="HTML • JavaScript • Adobe Illustrator • Vercel"
             link="https://visualize-ttc.vercel.app/"
+            article="/ttc-visualizer-project"
             github="https://github.com/mbrahimi25/visualize-ttc"
             gitlab="https://gitlab.com/mbrahimi25/visualize-ttc"
           />
