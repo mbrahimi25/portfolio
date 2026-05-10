@@ -1,12 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/sections/Hero";
 import ProjectCard from "@/components/ProjectCard";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
       <Navbar />
-
       <Hero />
 
       <section id="projects" className="mx-auto max-w-6xl px-6 py-16">
@@ -44,6 +44,7 @@ export default function Home() {
         </div>
       </section>
 
+      <Footer />
 
     </main>
   );
