@@ -16,8 +16,8 @@ export default function Navbar() {
           About
         </a>
 
-        <a href="#" className="hover:text-white">
-          Projects
+        <a href="/pages" className="hover:text-white">
+          Pages
         </a>
         
       </div>

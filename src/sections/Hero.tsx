@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaGithub, FaGitlab, FaLinkedin } from "react-icons/fa";
 
@@ -23,20 +24,41 @@ export default function Hero() {
         I create responsive websites, dashboards, and full-stack projects
         using modern technologies.
       </p>
+      <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 2,
+        ease: "easeOut",
+      }}
+      className="flex gap-4">
+        <div className="mt-8 flex gap-4">
+          <a
+            href="/about"
+            className="rounded-xl border border-white/20 px-6 py-3 font-medium transition hover:bg-white/10">
+            About
+          </a>
 
-      <div className="mt-8 flex gap-4">
-        <a
-          href="#projects"
-          className="rounded-xl bg-white px-6 py-3 font-medium text-black transition hover:opacity-80">
-          View Projects
-        </a>
+          <a
+            href="/pages"
+            className="rounded-xl border border-white/20 px-6 py-3 font-medium transition hover:bg-white/10">
+            Pages
+          </a>
 
-        <a
-          href="mailto:momohb2007@gmail.com"
-          className="rounded-xl border border-white/20 px-6 py-3 font-medium transition hover:bg-white/10">
-          Contact Me
-        </a>
-      </div>
+          <a
+            href="mailto:momohb2007@gmail.com"
+            className="rounded-xl border border-white/20 px-6 py-3 font-medium transition hover:bg-white/10">
+            Contact Me
+          </a>
+
+          <a
+            href="#projects"
+            className="rounded-xl bg-white px-6 py-3 font-medium text-black transition hover:opacity-80">
+            View Projects
+          </a>
+          
+        </div>
+      </motion.div>
 
       <div className="mt-8 flex gap-4">
           <a href="https://www.linkedin.com/in/mohbrahimi/" className="transition duration-200 hover:scale-120" target="_blank">
