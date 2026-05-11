@@ -17,11 +17,11 @@ export default function Hero() {
       </p>
 
       <h1 className="max-w-4xl text-5xl font-bold leading-tight md:text-7xl">
-        Building modern web applications.
+        Building modern applications.
       </h1>
 
       <p className="mt-6 max-w-2xl text-lg text-white/70">
-        I create responsive websites, dashboards, and full-stack projects
+        I create responsive websites, software, and maps
         using modern technologies.
       </p>
       <motion.div
