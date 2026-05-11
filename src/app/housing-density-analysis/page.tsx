@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ArticleHero from "@/sections/ArticleHero";
 
 import { SiArcgis } from "react-icons/si";
 import { IoMdDownload } from "react-icons/io";
@@ -11,22 +12,12 @@ export default function HousingDensityProjectPage() {
     <main className="min-h-screen bg-black text-white">
       <Navbar />
 
-      {/* Hero */}
-      <section className="mx-auto max-w-5xl px-6 py-24">
-        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-white/50">
-          Project
-        </p>
-
-        <h1 className="max-w-4xl text-5xl font-bold leading-tight md:text-7xl">
-          Housing Density Analysis
-        </h1>
-
-        <div className="mt-8 h-px w-24 bg-white/20" />
-
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-white/70">
-          By Mohamed Brahimi
-        </p>
-      </section>
+      <ArticleHero
+        title="Housing Density Analysis"
+        type="Project"
+        author="Mohamed Brahimi"
+        arcgis="https://arcg.is/GTn9X"
+      />
 
       {/* Main Article Content */}
       <section className="mx-auto max-w-6xl px-6 pb-24">

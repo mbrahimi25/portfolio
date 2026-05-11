@@ -71,6 +71,7 @@ export default function Hero() {
             <FaGitlab size={25} />
           </a>
       </div>
+      
       <div className="mx-auto my-6 h-px w-40 bg-white/20" />  
 
     </section>
