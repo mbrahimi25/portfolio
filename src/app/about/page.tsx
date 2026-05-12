@@ -1,5 +1,10 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
+import ArticleHero from "@/sections/ArticleHero";
 import Footer from "@/components/Footer";
+
+import { motion } from "framer-motion";
 
 import { IoMdDownload } from "react-icons/io";
 
@@ -8,58 +13,72 @@ export default function AboutPage() {
     <main className="min-h-screen bg-black text-white">
       <Navbar />
 
+      <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}>
+
       {/* Hero */}
-      <section className="mx-auto max-w-5xl px-6 py-24">
-        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-white/50">
-          About Me
-        </p>
 
-        <h2 className="max-w-4xl text-5xl font-bold leading-tight md:text-5xl">
-          Student and software developer.
-        </h2>
-
-        <div className="mt-8 h-px w-24 bg-white/20" />
-
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-white/70">
-          My name is Mohamed Brahimi. I'm a computer science student at the University of Toronto. <br/>
-          I am a programmer with interests in web development,
-          data-driven applications, geographic information systems, and software engineering. <br/>
-          I enjoy building projects that combine clean design, data analysis, strong functionality, and good user experience.
-        </p>
-      </section>
+        <ArticleHero
+          title="Student and software developer."
+          type="About Me"
+          desc="My name is Mohamed Brahimi. I'm a computer science student at the University of Toronto.
+            I am a programmer with interests in web development,
+            data-driven applications, geographic information systems, and software engineering.
+            I enjoy building projects that combine clean design, data analysis, strong functionality, and good user experience."
+          github="https://github.com/mbrahimi25/"
+          gitlab="https://gitlab.com/mbrahimi25/"
+          linkedin="https://www.linkedin.com/in/mohbrahimi/"
+          />
+      
 
       {/* Info Grid */}
       <section className="mx-auto grid max-w-5xl gap-8 px-6 pb-24 md:grid-cols-2">
 
         {/* Background */}
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
-          <h2 className="text-2xl font-bold">
-            Background
-          </h2>
+        <motion.div
+        initial={{ opacity: 0, x: -50}}
+        animate={{ opacity: 1, x: 0}}
+        transition={{ duration: 2 }}>
 
-          <p className="mt-4 leading-7 text-white/70">
-            I have experience working with Python, Django,
-            JavaScript, and modern frontend technologies.
-            I enjoy creating full-stack applications,
-            dashboards, and interactive web tools.
-          </p>
-        </div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
+            <h2 className="text-2xl font-bold">
+              Background
+            </h2>
+
+            <p className="mt-4 leading-7 text-white/70">
+              I have experience working with Python, Django,
+              JavaScript, and modern frontend technologies.
+              I enjoy creating full-stack applications,
+              dashboards, and interactive web tools.
+            </p>
+          </div>
+
+        </motion.div>
 
         {/* Interests */}
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
-          <h2 className="text-2xl font-bold">
-            Interests
-          </h2>
+        <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 2 }}>
 
-          <ul className="mt-4 space-y-3 text-white/70">
-            <li>• Web Development</li>
-            <li>• UI / UX Design</li>
-            <li>• Data Visualization</li>
-            <li>• Software Engineering</li>
-            <li>• Sports Analytics</li>
-            <li>• Geographic Information Systems</li>
-          </ul>
-        </div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
+            <h2 className="text-2xl font-bold">
+              Interests
+            </h2>
+
+            <ul className="mt-4 space-y-3 text-white/70">
+              <li>• Web Development</li>
+              <li>• UI / UX Design</li>
+              <li>• Data Visualization</li>
+              <li>• Software Engineering</li>
+              <li>• Sports Analytics</li>
+              <li>• Geographic Information Systems</li>
+            </ul>
+          </div>
+
+        </motion.div>
 
       </section>
 
@@ -93,18 +112,20 @@ export default function AboutPage() {
         </div>
       </section>
       
-      <section className="mx-auto max-w-5xl px-6 pb-24">
+      <section className="mx-auto max-w-5xl px-6 pb-24 space-y-5">
         
-          <a
+        <a
           href="/Mohamed_Brahimi_CS_Resume.pdf"
           download
           className="rounded-xl flex justify-center gap-4 bg-white px-6 py-3 font-medium text-black transition hover:opacity-80">
             Download Resume <IoMdDownload size={25}/>
-          </a>
+        </a>
+
+        <iframe src="/Mohamed_Brahimi_CS_Resume.pdf" width="100%" height="600px"></iframe>
 
       </section>
 
-      
+      </motion.div>
 
       <Footer />
     </main>

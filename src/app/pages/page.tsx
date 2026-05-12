@@ -1,6 +1,10 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+
+import { motion } from "framer-motion";
 
 const articles = [
   {
@@ -30,39 +34,53 @@ export default function PagesIndex() {
     <main className="min-h-screen bg-black text-white">
       <Navbar />
 
-      {/* Hero-style header */}
-      <section className="flex flex-col items-center justify-center px-6 py-24 text-center">
-        <h1 className="max-w-4xl text-5xl font-bold leading-tight md:text-7xl">
-          Pages & Articles
-        </h1>
+      <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}>
 
-        <p className="mt-6 max-w-2xl text-lg text-white/70">
-          Notes, thoughts, and technical write-ups.
-        </p>
+        {/* Hero-style header */}
+        <section className="flex flex-col items-center justify-center px-6 py-24 text-center">
+          <h1 className="max-w-4xl text-5xl font-bold leading-tight md:text-7xl">
+            Pages & Articles
+          </h1>
 
-        <div className="mt-6 h-px w-24 bg-white/20" />
-      </section>
+          <p className="mt-6 max-w-2xl text-lg text-white/70">
+            Notes, thoughts, and technical write-ups.
+          </p>
 
-      {/* Articles */}
-      <section className="mx-auto w-fit px-6 pb-24">
-        <div className="space-y-6">
-          {articles.map((a) => (
-            <Link
-              key={a.slug}
-              href={`/${a.slug}`}
-              className="block rounded-xl border border-white/10 bg-white/5 p-6 text-center transition hover:bg-white/10"
-            >
-              <h2 className="text-2xl font-bold">
-                {a.title}
-              </h2>
+          <div className="mt-6 h-px w-24 bg-white/20" />
+        </section>
 
-              <p className="mt-2 text-white/60">
-                {a.description}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
+        {/* Articles */}
+        <section className="mx-auto w-fit px-6 pb-24">
+          <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 2 }}>
+
+            <div className="space-y-6">
+              {articles.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={`/${a.slug}`}
+                  className="block rounded-xl border border-white/10 bg-white/5 p-6 text-center transition hover:bg-white/10"
+                >
+                  <h2 className="text-2xl font-bold">
+                    {a.title}
+                  </h2>
+
+                  <p className="mt-2 text-white/60">
+                    {a.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+
+          </motion.div>
+        </section>
+
+      </motion.div>
 
       <Footer />
     </main>

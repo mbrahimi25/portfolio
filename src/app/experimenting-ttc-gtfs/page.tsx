@@ -12,7 +12,7 @@ export default function TtcGtfsArticle() {
       <ArticleHero
         title="Experimenting with TTC GTFS data in QGIS"
         type="Article"
-        author="Mohamed Brahimi"
+        desc="By Mohamed Brahimi"
       />
 
       {/* Main Article Content */}

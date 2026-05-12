@@ -15,7 +15,7 @@ export default function HousingDensityProjectPage() {
       <ArticleHero
         title="Housing Density Analysis"
         type="Project"
-        author="Mohamed Brahimi"
+        desc="By Mohamed Brahimi"
         arcgis="https://arcg.is/GTn9X"
       />
 

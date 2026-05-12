@@ -12,7 +12,7 @@ export default function LichessDashboardProjectPage() {
       <ArticleHero
         title="Lichess Dashboard"
         type="Project"
-        author="Mohamed Brahimi"
+        desc="By Mohamed Brahimi"
         link="https://lichess-dashboard.vercel.app/"
         github="https://github.com/mbrahimi25/lichess-dashboard"
         gitlab="https://gitlab.com/mbrahimi25/lichess-dashboard"
