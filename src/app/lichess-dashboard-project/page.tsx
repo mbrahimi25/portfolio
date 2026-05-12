@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import ArticleHero from "@/sections/ArticleHero";
 
 import Image from "next/image";
+import { SiDjango, SiLichess, SiHtml5, SiCss } from "react-icons/si";
 
 export default function LichessDashboardProjectPage() {
   return (
@@ -16,7 +17,12 @@ export default function LichessDashboardProjectPage() {
         link="https://lichess-dashboard.vercel.app/"
         github="https://github.com/mbrahimi25/lichess-dashboard"
         gitlab="https://gitlab.com/mbrahimi25/lichess-dashboard"
-      />
+        >
+        <SiDjango size={25} className="transition duration-200 hover:scale-120"/>
+        <SiHtml5 size={25} className="transition duration-200 hover:scale-120"/>
+        <SiCss size={25} className="transition duration-200 hover:scale-120"/>
+        <SiLichess size={25} className="transition duration-200 hover:scale-120"/> 
+      </ArticleHero>
 
       {/* Main Article Content */}
       <section className="mx-auto max-w-6xl px-6 pb-24">
