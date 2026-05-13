@@ -42,6 +42,7 @@ export default function Projects() {
             title="FBRef Stats"
             description="Python library for scraping soccer statistics from FBRef."
             tech="Python • Requests • BeautifulSoup4"
+            article="/fbref-stats"
             github="https://github.com/mbrahimi25/fbrefstats"
             pypi="https://pypi.org/project/fbrefstats/"
           />

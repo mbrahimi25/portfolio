@@ -27,6 +27,11 @@ const articles = [
     title: "Neighbourhood Housing Density Analysis",
     description: "Collecting and mapping data on QGIS to analyse housing density in a Toronto dissemination area.",
   },
+  {
+    slug: "fbref-stats",
+    title: "FBRef Stats",
+    description: "Soccer statistics web scraper made using Python with BeautifulSoup4 and requests",
+  },
 ];
 
 export default function PagesIndex() {
