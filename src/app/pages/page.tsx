@@ -8,6 +8,11 @@ import { motion } from "framer-motion";
 
 const articles = [
   {
+    slug: "algiers-transit",
+    title: "Visualizing Public Transit in Algiers",
+    description: "Collecting, organising, and displaying data related to the public transit system in Algiers province, Algeria.",
+  },
+  {
     slug: "lichess-dashboard-project",
     title: "Lichess Dashboard Project",
     description: "Web application created using Django which displays Lichess user information in a user-friendly dashboard format.",
