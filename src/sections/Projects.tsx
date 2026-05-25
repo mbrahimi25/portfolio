@@ -19,6 +19,15 @@ export default function Projects() {
 
         <div className="grid gap-6 md:grid-cols-2">
           <ProjectCard
+            title="Algiers Transit Visualization"
+            description="Interactive transit diagram and GIS map of public transit in Algiers, Algeria."
+            tech="QGIS • OpenStreetMap • Adobe Illustrator • HTML/CSS/JS • Vercel"
+            article="/algiers-transit"
+            link="https://algiers-transit.vercel.app"
+            github="https://github.com/mbrahimi25/algiers-transit"
+          />
+
+          <ProjectCard
             title="Lichess Dashboard"
             description="Web application created using Django which displays Lichess user information in a user-friendly dashboard format."
             tech="Python • Django • Requests • Lichess API • Vercel"
