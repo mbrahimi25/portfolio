@@ -2,7 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ArticleHero from "@/sections/ArticleHero";
 
-import { SiQgis, SiOpenstreetmap } from "react-icons/si";
+import { SiQgis, SiOpenstreetmap, SiHtml5, SiJavascript, SiCss } from "react-icons/si";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { BiLogoAdobe } from "react-icons/bi";
 
 
@@ -17,10 +18,16 @@ export default function TtcGtfsArticle() {
         title="Visualizing Public Transit in Algiers"
         type="Article"
         desc="By Mohamed Brahimi"
+        link="https://algiers-transit.vercel.app/"
+        github="https://github.com/mbrahimi25/algiers-transit"
       >
         <SiQgis size={25} className="transition duration-200 hover:scale-120"/>
         <SiOpenstreetmap size={25} className="transition duration-200 hover:scale-120"/>
         <BiLogoAdobe size={25} className="transition duration-200 hover:scale-120"/>
+        <SiHtml5 size={25} className="transition duration-200 hover:scale-120"/>
+        <SiJavascript size={25} className="transition duration-200 hover:scale-120"/>
+        <SiCss size={25} className="transition duration-200 hover:scale-120"/>
+
       </ArticleHero>
 
       {/* Main Article Content */}
@@ -93,9 +100,23 @@ export default function TtcGtfsArticle() {
               while learning from the mistakes and limitations of my previous interactive transit map.
             </p>
 
+            <hr className="border-white/30 my-8" />
+
             <p className="mt-6 leading-8 text-white/70">
-              I am still working on this project. Check back over the next few days to see any new updates!
+              By exporting my diagram as an SVG file from Adobe Illustrator, I was able to manipulate the image as if it was an HTML file.
+              I wrote a simple JSX script to rename all the station elements in the following format: <br/>
+              • metro_n <br/>
+              • tramway_n <br/>
+              • or train_n <br/>
+              so that my JavaScript program can identify which elements should be interacted with.
+              I then wrote a large stations.js file with info regarding each station, and stylised the info panel with CSS. <br/>
             </p>
+
+            <hr className="border-white/30 my-8" />
+
+            <p className="text-white/70 flex items-center gap-2">You can check out the interactive web map repo on Github using this link: <a href="https://github.com/mbrahimi25/algiers-transit" className="text-white hover:text-blue-400" target="_blank"><FaGithub size={25}/></a> <br/> <br/> </p>
+            <p className="text-white/70 flex items-center gap-2">I deployed the app on Vercel using the GitHub repo. You can check that out here: <a href="https://algiers-transit.vercel.app/" className="text-white hover:text-blue-400" target="_blank"><FaExternalLinkAlt size={25}/></a></p>
+
 
           </div>
         </div>
