@@ -41,7 +41,7 @@ export default function TtcGtfsArticle() {
                 I worked with TTC GTFS data to map regions in the city which were far from any transit stop, and I've mapped
                 the planned Alto HSR region overlayed with transit and population density. <br/><br/>
 
-                Working with Canadian transit and population data thanks to the high standard of data organisation and ease of access provided by Canadian ministiries.
+                Working with Canadian transit and population data is easy thanks to the high standard of data organisation and ease of access provided by Canadian ministries.
                 Retrieving geodata from Statistics Canada, Ontario GeoHub, and the City of Toronto's Open Data Portal is simple and straightforward. <br/>
 
                 In order to challenge myself and also to learn more about my parents' city of birth, I decided to dive into the Algiers public transit system. <br/>
