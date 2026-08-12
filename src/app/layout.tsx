@@ -14,7 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Mohamed Brahimi",
-  description: "Mohamed Brahimi's Personal Portfolio",
+  description: "Mohamed Brahimi's personal portfolio showcasing software projects, technical skills, and frontend development work built with modern web technologies.",
+  alternates: {
+    canonical: "https://mbrahimi.social/"
+  },
 };
 
 export default function RootLayout({
