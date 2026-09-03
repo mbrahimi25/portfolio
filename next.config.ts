@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
     // Force Turbopack to use the directory where next.config.ts lives
     root: path.join(__dirname),
   },
+
+  allowedDevOrigins: ['10.0.0.189'],
+  
 };
 
 export default nextConfig;
