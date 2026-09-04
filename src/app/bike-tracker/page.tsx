@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CodeBlock from "@/components/CodeBlock";
 import ArticleHero from "@/sections/ArticleHero";
 
 import { SiRaspberrypi, SiPython, SiSqlite, SiQgis } from "react-icons/si";
@@ -49,10 +50,71 @@ export default function TtcGtfsArticle() {
             <hr className="border-white/30 my-8" />
 
             <p className="mt-6 leading-8 text-white/70">
-            
+                After buying and grouping together all the parts I needed, I began work on my project. <br/>
+                I began with testing my VK-162 GPS module in the Raspberry Pi terminal using <i>cgps</i>. Once I got that out of the way,
+                I installed the <i>python3-gps</i> library and tested the GPS by creating a sample Python script:
             </p>
 
-            
+            <CodeBlock
+              language="python"
+              code={
+`import gps
+
+
+session = gps.gps(mode=gps.WATCH_ENABLE | gps.WATCH_NEWSTYLE)
+
+while True:
+    report = session.next()
+
+    if report["class"] == "TPV":
+        if hasattr(report, "lat") and hasattr(report, "lon"):
+            print(f"Latitude:  {report.lat}")
+            print(f"Longitude: {report.lon}")
+
+        if hasattr(report, "speed"):
+            print(f"Speed:     {report.speed * 3.6:.2f} km/h")
+
+        if hasattr(report, "alt"):
+            print(f"Altitude:  {report.alt:.2f} m")
+
+        print("-" * 30)`
+            }/>
+
+            <p className="mt-6 leading-8 text-white/70">
+                I then wired up my 16x2 LCD screen to the Raspberry Pi and tested that too. <br/>
+                Finally, I wired up my DS3231 Real Time Clock to the Raspberry Pi via I2C.
+                This would allow my bike tracker to keep time even when the Raspberry Pi is turned off,
+                and when the GPS device isn't receiving data from any GPS satellites. <br/><br/>
+            </p>
+            <div className = "flex gap-4">
+              <Image
+              src="/LCD_test1.jpg"
+              alt="Sixteen by two Liquid Crystal Display Test 1"
+              width={400}
+              height={200}
+              className="rounded-2xl"/>
+
+              <Image
+              src="/LCD_test2.jpg"
+              alt="Real time clock tested with liquid crystal display"
+              width={500}
+              height={400}
+              className="rounded-2xl"/>
+            </div>
+
+            <p className="mt-6 leading-8 text-white/70">
+                I also had a push button with a large cap available, so I can wire it in and use it in my project prototype in the future. <br/>
+                With the testing of the GPS device, the LCD, and the RTC module out of the way, I can begin programming. <br/>
+                For my first prototype, I simply want the ability to start/stop trips (using the button),
+                display the time and current trip number/status on the LCD,
+                and save the coordinates registered by the GPS device onto a SQLite local database or a CSV file. <br/>
+            </p>
+
+
+            <br/><br/><br/>
+            <h3 className="text-lg">
+              This project is still in development! Check back in the near future to see any updates!
+            </h3>
 
           </div>
         </div>

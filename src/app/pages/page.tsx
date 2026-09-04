@@ -8,6 +8,11 @@ import { motion } from "framer-motion";
 
 const articles = [
   {
+    slug: "bike-tracker",
+    title: "Bike Tracker",
+    description: "How I'm building a GPS bike tracker using a Raspberry Pi and Python.",
+  },
+  {
     slug: "algiers-transit",
     title: "Visualizing Public Transit in Algiers",
     description: "Collecting, organising, and displaying data related to the public transit system in Algiers province, Algeria.",
