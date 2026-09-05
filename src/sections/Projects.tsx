@@ -18,6 +18,14 @@ export default function Projects() {
         </h2>
 
         <div className="grid gap-6 md:grid-cols-2">
+
+          <ProjectCard
+            title="Raspberry Pi Bike Tracker"
+            description="A GPS Bike Tracker powered by a Raspberry Pi Zero W"
+            tech="Raspberry Pi • Python • SQLite"
+            article="/bike-tracker"
+          />
+
           <ProjectCard
             title="Algiers Transit Visualization"
             description="Interactive transit diagram and GIS map of public transit in Algiers, Algeria."

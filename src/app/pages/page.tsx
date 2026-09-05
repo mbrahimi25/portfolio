@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const articles = [
   {
     slug: "bike-tracker",
-    title: "Bike Tracker",
+    title: "Raspberry Pi Bike Tracker",
     description: "How I'm building a GPS bike tracker using a Raspberry Pi and Python.",
   },
   {
