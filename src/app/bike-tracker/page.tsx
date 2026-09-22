@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import CodeBlock from "@/components/CodeBlock";
 import ArticleHero from "@/sections/ArticleHero";
 
-import { SiRaspberrypi, SiPython, SiSqlite, SiQgis } from "react-icons/si";
+import { SiRaspberrypi, SiPython, SiSqlite } from "react-icons/si";
 import { FaLinux } from "react-icons/fa";
 
 
@@ -23,7 +23,6 @@ export default function TtcGtfsArticle() {
         <FaLinux size={25} className="transition duration-200 hover:scale-120"/>
         <SiPython size={25} className="transition duration-200 hover:scale-120"/>
         <SiSqlite size={25} className="transition duration-200 hover:scale-120"/>
-        <SiQgis size={25} className="transition duration-200 hover:scale-120"/>
 
       </ArticleHero>
 
@@ -110,6 +109,24 @@ while True:
                 and save the coordinates registered by the GPS device onto a SQLite local database or a CSV file. <br/>
             </p>
 
+            <hr className="border-white/30 my-8" />
+
+            <p className="mt-6 leading-8 text-white/70">
+                After more testing, I realised the RTC was both problematic and redundant, as the GPS module receives time information from GPS satellites.
+                I decided to remove it from the project. <br/>
+                After a lot of tweaking and testing, I managed to create a very basic prototype for the bike tracker.
+                Packaged in a cardboard box, the button and the LCD display are accessible to the user. There are holes on the side for the GPS wire and a power supply. <br/>
+            </p>
+
+            <p className="mt-6 leading-8 text-white/70">
+                I experimented with the Adafruit LCD Python library, and found it was much simpler than the code I currently had. <br/>
+                I combined this with the GPS testing code, a local SQLite database, and functionality for the pushbutton, and finally had a working prototype for the project.<br/>
+                <br/>
+                At this stage, the bike tracker turns on and waits for a button to be pressed, which starts a trip. <br/>
+                An entry is placed in a SQLite table called <i>trips</i>, containing the current trip's start time and ID.<br/>
+                Every second, a new entry is placed in another SQLite table called <i>gps_points</i>. This table stores the tracker's GPS coordinates
+                every second, alongside the time, speed, and the trip ID which this entry is associated with. <br/>
+            </p>
 
             <br/><br/><br/>
             <h3 className="text-lg">
