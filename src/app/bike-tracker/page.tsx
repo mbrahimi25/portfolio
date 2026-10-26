@@ -34,7 +34,7 @@ export default function TtcGtfsArticle() {
           {/* Section */}
           <div className="">
             <p className="mt-6 leading-8 text-white/70">
-                In the summer of 2026, I begean biking more, which led me to think how I could bridge my new passion for biking with my passion
+                In the summer of 2026, I began biking more, which led me to think how I could bridge my new passion for biking with my passion
                 and coursework involving computer science. <br/><br/>
 
                 After thinking about it for a while, I decided to dig up my old robotics components from years ago to figure out what worked and didn't work. <br/>
