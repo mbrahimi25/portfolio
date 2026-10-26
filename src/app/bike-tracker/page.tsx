@@ -15,9 +15,10 @@ export default function TtcGtfsArticle() {
       <Navbar />
 
       <ArticleHero
-        title="Raspberry Pi Bike Tracker"
+        title="Cycletrace"
         type="Project"
         desc="By Mohamed Brahimi"
+        github="https://github.com/mbrahimi25/cycletrace"
       >
         <SiRaspberrypi size={25} className="transition duration-200 hover:scale-120"/>
         <FaLinux size={25} className="transition duration-200 hover:scale-120"/>

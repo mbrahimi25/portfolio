@@ -20,10 +20,11 @@ export default function Projects() {
         <div className="grid gap-6 md:grid-cols-2">
 
           <ProjectCard
-            title="Raspberry Pi Bike Tracker"
+            title="Cycletrace"
             description="A GPS Bike Tracker powered by a Raspberry Pi Zero W"
-            tech="Raspberry Pi • Python • SQLite"
+            tech="Raspberry Pi • Python • SQLite • Supabase"
             article="/bike-tracker"
+            github="https://github.com/mbrahimi25/cycletrace"
           />
 
           <ProjectCard
