@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ArticleHero from "@/sections/ArticleHero";
+import Divider from "@/components/Divider";
 
 import { SiQgis, SiOpenstreetmap, SiHtml5, SiJavascript, SiCss } from "react-icons/si";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
@@ -47,7 +48,7 @@ export default function TtcGtfsArticle() {
                 In order to challenge myself and also to learn more about my parents' city of birth, I decided to dive into the Algiers public transit system. <br/>
             </p>
 
-            <hr className="border-white/30 my-8" />
+            <Divider />
 
             <p className="mt-6 leading-8 text-white/70">
               I wanted to begin by mapping Algiers' transit system in QGIS. <br/><br/>
@@ -68,7 +69,7 @@ export default function TtcGtfsArticle() {
             height={400}
             className="rounded-2xl mt-6"/>
 
-            <hr className="border-white/30 my-8" />
+            <Divider />
 
             <p className="mt-6 leading-8 text-white/70">
               After making a basic map of the Algiers region and its trams, trains, metro, and aerial tramways, 
@@ -100,7 +101,7 @@ export default function TtcGtfsArticle() {
               while learning from the mistakes and limitations of my previous interactive transit map.
             </p>
 
-            <hr className="border-white/30 my-8" />
+            <Divider />
 
             <p className="mt-6 leading-8 text-white/70">
               By exporting my diagram as an SVG file from Adobe Illustrator, I was able to manipulate the image as if it was an HTML file.
@@ -112,7 +113,7 @@ export default function TtcGtfsArticle() {
               I then wrote a large stations.js file with info regarding each station, and stylised the info panel with CSS. <br/>
             </p>
 
-            <hr className="border-white/30 my-8" />
+            <Divider />
 
             <p className="text-white/70 flex items-center gap-2">You can check out the interactive web map repo on Github using this link: <a href="https://github.com/mbrahimi25/algiers-transit" className="text-white hover:text-blue-400" target="_blank"><FaGithub size={25}/></a> <br/> <br/> </p>
             <p className="text-white/70 flex items-center gap-2">I deployed the app on Vercel using the GitHub repo. You can check that out here: <a href="https://algiers-transit.vercel.app/" className="text-white hover:text-blue-400" target="_blank"><FaExternalLinkAlt size={25}/></a></p>

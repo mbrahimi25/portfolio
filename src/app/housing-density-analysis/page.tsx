@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ArticleHero from "@/sections/ArticleHero";
+import Divider from "@/components/Divider";
 
 import { SiArcgis } from "react-icons/si";
 import { IoMdDownload } from "react-icons/io";
@@ -56,7 +57,7 @@ export default function HousingDensityProjectPage() {
 
             </div>
 
-            <hr className="border-white/30 my-8" />
+            <Divider />
 
             <p className="text-white/70 flex items-center gap-2">My analysis and conclusion which was submitted as part of this analysis can be found below:</p>
 

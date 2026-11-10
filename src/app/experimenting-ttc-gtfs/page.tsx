@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ArticleHero from "@/sections/ArticleHero";
+import Divider from "@/components/Divider";
 
 import Image from "next/image";
 
@@ -55,7 +56,7 @@ export default function TtcGtfsArticle() {
                 or simply suburban or very high income neighbourhoods.
             </p>
 
-            <hr className="border-white/30 my-8" />
+            <Divider />
 
             <p className="mt-6 leading-8 text-white/70">
                 I wanted to filter this down even more, and to find out how much of the city is near 
@@ -72,7 +73,7 @@ export default function TtcGtfsArticle() {
                 There is still the issue of defining what frequent transit is, and how long it must run to be considered frequent.
             </p>
 
-            <hr className="border-white/30 my-8" />
+            <Divider />
 
             <p className="mt-6 leading-8 text-white/70">
                 Using SQL, it was easy to select the subway/LRT and express bus network,

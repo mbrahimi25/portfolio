@@ -127,10 +127,14 @@ while True:
                 if the Pi shuts down midway. <br/>
             </p>
 
-            <br/><br/><br/>
-            <h3 className="text-lg">
-              This project is still in development! Check back in the near future to see any updates!
-            </h3>
+            <p className="mt-6 leading-8 text-white/70">
+                Once all this was done, I tested the tracker from my window, then in real life. I developed a simple Vite + React 
+                web app to display trips and GPS points from Supabase, alongside statistics such as speed and trip time. <br/>
+            </p>
+
+            <p className="mt-6 leading-8 text-white/70">
+                The entire project can be found on my GitHub profile. Thanks for reading!
+            </p>
 
           </div>
         </div>
