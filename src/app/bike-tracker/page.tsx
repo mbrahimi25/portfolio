@@ -1,9 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CodeBlock from "@/components/CodeBlock";
+import Divider from "@/components/Divider";
 import ArticleHero from "@/sections/ArticleHero";
 
-import { SiRaspberrypi, SiPython, SiSqlite } from "react-icons/si";
+import { SiRaspberrypi, SiPython, SiSqlite, SiSupabase } from "react-icons/si";
 import { FaLinux } from "react-icons/fa";
 
 
@@ -24,6 +25,7 @@ export default function TtcGtfsArticle() {
         <FaLinux size={25} className="transition duration-200 hover:scale-120"/>
         <SiPython size={25} className="transition duration-200 hover:scale-120"/>
         <SiSqlite size={25} className="transition duration-200 hover:scale-120"/>
+        <SiSupabase size={25} className="transition duration-200 hover:scale-120"/>
 
       </ArticleHero>
 
@@ -43,11 +45,12 @@ export default function TtcGtfsArticle() {
 
                 I began to brainstorm and write down ideas for my project, and compared various ways I could execute it.
                 I had all the main parts I needed, and noted what I would need to buy.<br/>
-                The final debate rested over the main brain behind the project: would I use an Arduino Nano (which I have) or a Raspberry Pi Zero (which I would have to purchase)<br/>
-                After some thinking, I decided to use a Raspberry Pi. It would give me the opportunity to learn Linux more deeply, connect to the internet and a server more simply, and save data to a memory card without an external module. <br/><br/>
+                The final debate rested over the main brain behind the project: would I use an Arduino Nano (which I have) or a Raspberry Pi Zero (which I would have to purchase) ? <br/>
+                After some thinking, I decided to use a Raspberry Pi. It would give me the opportunity to learn basic Linux shell scripting, connect to the a WiFi network more easily, 
+                and save data to a memory card without an external module. <br/>
             </p>
 
-            <hr className="border-white/30 my-8" />
+            <Divider/>
 
             <p className="mt-6 leading-8 text-white/70">
                 After buying and grouping together all the parts I needed, I began work on my project. <br/>
@@ -77,44 +80,32 @@ while True:
         if hasattr(report, "alt"):
             print(f"Altitude:  {report.alt:.2f} m")
 
-        print("-" * 30)`
-            }/>
+        print("-" * 30)`}
+            />
 
             <p className="mt-6 leading-8 text-white/70">
                 I then wired up my 16x2 LCD screen to the Raspberry Pi and tested that too. <br/>
-                Finally, I wired up my DS3231 Real Time Clock to the Raspberry Pi via I2C.
-                This would allow my bike tracker to keep time even when the Raspberry Pi is turned off,
-                and when the GPS device isn't receiving data from any GPS satellites. <br/><br/>
             </p>
-            <div className = "flex gap-4">
-              <Image
+
+            <Image
               src="/LCD_test1.jpg"
               alt="Sixteen by two Liquid Crystal Display Test 1"
               width={400}
               height={200}
-              className="rounded-2xl"/>
-
-              <Image
-              src="/LCD_test2.jpg"
-              alt="Real time clock tested with liquid crystal display"
-              width={500}
-              height={400}
-              className="rounded-2xl"/>
-            </div>
+              className="rounded-2xl"
+            />
 
             <p className="mt-6 leading-8 text-white/70">
-                I also had a push button with a large cap available, so I can wire it in and use it in my project prototype in the future. <br/>
-                With the testing of the GPS device, the LCD, and the RTC module out of the way, I can begin programming. <br/>
-                For my first prototype, I simply want the ability to start/stop trips (using the button),
-                display the time and current trip number/status on the LCD,
-                and save the coordinates registered by the GPS device onto a SQLite local database or a CSV file. <br/>
+                I also had a push button with a large cap available, which I connected to the Pi's GPIO pins using jumper wires. <br/>
+                With the testing of the GPS device, and the LCD out of the way, I can begin programming. <br/>
+                For my first prototype, I simply wanted the ability to start/stop trips (using the button),
+                display current trip number/status on the LCD, and save the coordinates registered by the GPS device 
+                onto a local SQLite database or a CSV file. <br/>
             </p>
 
-            <hr className="border-white/30 my-8" />
+            <Divider/>
 
             <p className="mt-6 leading-8 text-white/70">
-                After more testing, I realised the RTC was both problematic and redundant, as the GPS module receives time information from GPS satellites.
-                I decided to remove it from the project. <br/>
                 After a lot of tweaking and testing, I managed to create a very basic prototype for the bike tracker.
                 Packaged in a cardboard box, the button and the LCD display are accessible to the user. There are holes on the side for the GPS wire and a power supply. <br/>
             </p>
@@ -123,10 +114,17 @@ while True:
                 I experimented with the Adafruit LCD Python library, and found it was much simpler than the code I currently had. <br/>
                 I combined this with the GPS testing code, a local SQLite database, and functionality for the pushbutton, and finally had a working prototype for the project.<br/>
                 <br/>
-                At this stage, the bike tracker turns on and waits for a button to be pressed, which starts a trip. <br/>
-                An entry is placed in a SQLite table called <i>trips</i>, containing the current trip's start time and ID.<br/>
+                At this stage, the bike tracker turns on and waits for a button to be pressed, which starts a trip. 
+                An entry is placed in a SQLite table called <i>trips</i>, containing the current trip's start time and ID. 
                 Every second, a new entry is placed in another SQLite table called <i>gps_points</i>. This table stores the tracker's GPS coordinates
                 every second, alongside the time, speed, and the trip ID which this entry is associated with. <br/>
+            </p>
+
+            <p className="mt-6 leading-8 text-white/70">
+                After the local database functionality was complete, I implemented the Supabase sync feature. 
+                The Raspberry Pi checks for a WiFi connection every once in a while. If it finds one, it syncs each trip, 
+                then each GPS point one-by-one, and sets each row's <i>synced</i> value to 1, so that it never resyncs, even 
+                if the Pi shuts down midway. <br/>
             </p>
 
             <br/><br/><br/>

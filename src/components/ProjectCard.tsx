@@ -2,13 +2,8 @@
 
 import { useState } from "react";
 
-import {
-  FaGithub,
-  FaGitlab,
-  FaExternalLinkAlt,
-} from "react-icons/fa";
-
-import { SiPypi } from "react-icons/si";
+import { FaGithub, FaGitlab, FaExternalLinkAlt } from "react-icons/fa";
+import { SiPypi, SiDevpost } from "react-icons/si";
 import { GrArticle } from "react-icons/gr";
 
 type ProjectCardProps = {
@@ -20,6 +15,7 @@ type ProjectCardProps = {
   github?: string;
   gitlab?: string;
   pypi?: string;
+  devpost?: string;
 };
 
 export default function ProjectCard({
@@ -31,6 +27,7 @@ export default function ProjectCard({
   github,
   gitlab,
   pypi,
+  devpost,
 }: ProjectCardProps) {
   const [position, setPosition] = useState({
     x: 0,
@@ -127,6 +124,16 @@ export default function ProjectCard({
               className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition hover:scale-120"
             >
               <SiPypi size={20} />
+            </a>
+          )}
+
+          {devpost && (
+            <a
+              href={devpost}
+              target="_blank"
+              className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition hover:scale-120"
+            >
+              <SiDevpost size={20} />
             </a>
           )}
 

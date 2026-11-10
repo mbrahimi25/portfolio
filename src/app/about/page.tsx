@@ -28,7 +28,6 @@ export default function AboutPage() {
             data-driven applications, geographic information systems, and software engineering.
             I enjoy building projects that combine clean design, data analysis, strong functionality, and good user experience."
           github="https://github.com/mbrahimi25/"
-          gitlab="https://gitlab.com/mbrahimi25/"
           linkedin="https://www.linkedin.com/in/mohbrahimi/"
           />
       
@@ -48,10 +47,10 @@ export default function AboutPage() {
             </h2>
 
             <p className="mt-4 leading-7 text-white/70">
-              I have experience working with Python, Django,
-              JavaScript, and modern frontend technologies.
-              I enjoy creating full-stack applications,
-              dashboards, and interactive web tools.
+              I grew up and currently live in Toronto, and fell in love with programming at a young age thanks to my father,
+              who's a software developer. I grew to love building software and hardware projects, and while I went through many
+              "phases" with my interests, the joy of having a finished project was always the same. Over the last decade, I've built
+              projects incorporating robotics, game development, web and mobile development, and data analysis skills.
             </p>
           </div>
 
@@ -69,10 +68,9 @@ export default function AboutPage() {
             </h2>
 
             <ul className="mt-4 space-y-3 text-white/70">
-              <li>• Web Development</li>
-              <li>• UI / UX Design</li>
-              <li>• Data Visualization</li>
               <li>• Software Engineering</li>
+              <li>• Web Development</li>
+              <li>• Data Analysis and Visualization</li>
               <li>• Sports Analytics</li>
               <li>• Geographic Information Systems</li>
             </ul>
@@ -80,36 +78,6 @@ export default function AboutPage() {
 
         </motion.div>
 
-      </section>
-
-      {/* Tech Stack */}
-      <section className="mx-auto max-w-5xl px-6 pb-24">
-        <h2 className="text-3xl font-bold">Skills</h2>
-
-        <div className="mt-8 flex flex-wrap gap-4">
-          {[
-            "Python",
-            "C",
-            "HTML/CSS/JS",
-            "Unity C#",
-            "Django",
-            "Next.js",
-            "React",
-            "TypeScript",
-            "Tailwind CSS",
-            "Git",
-            "PostgreSQL",
-            "QGIS",
-            "ArcGIS Suite",
-          ].map((tech) => (
-            <div
-              key={tech}
-              className="rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-white/70"
-            >
-              {tech}
-            </div>
-          ))}
-        </div>
       </section>
       
       <section className="mx-auto max-w-5xl px-6 pb-24 space-y-5">

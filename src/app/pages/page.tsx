@@ -9,8 +9,8 @@ import { motion } from "framer-motion";
 const articles = [
   {
     slug: "bike-tracker",
-    title: "Raspberry Pi Bike Tracker",
-    description: "How I'm building a GPS bike tracker using a Raspberry Pi and Python.",
+    title: "Cycletrace",
+    description: "How I'm building a GPS bike tracker using a Raspberry Pi Zero W.",
   },
   {
     slug: "algiers-transit",
@@ -25,7 +25,7 @@ const articles = [
   {
     slug: "ttc-visualizer-project",
     title: "TTC Visualizer Project",
-    description: "Interactive map of Toronto’s TTC subway, LRT, and streetcar system. Includes current and under-construction lines ",
+    description: "Interactive map of Toronto’s TTC subway, LRT, and streetcar system.",
   },
   {
     slug: "experimenting-ttc-gtfs",
@@ -40,7 +40,7 @@ const articles = [
   {
     slug: "fbref-stats",
     title: "FBRef Stats",
-    description: "Soccer statistics web scraper made using Python with BeautifulSoup4 and requests",
+    description: "Soccer statistics web scraper made using Python, BeautifulSoup4 and Requests.",
   },
 ];
 

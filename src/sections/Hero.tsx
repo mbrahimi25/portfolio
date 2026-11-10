@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaGithub, FaGitlab, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -41,7 +41,7 @@ export default function Hero() {
         <a
           href="mailto:momohb2007@gmail.com"
           className="rounded-xl border border-white/20 px-6 py-3 font-medium transition hover:bg-white/10">
-          Contact Me
+          Email
         </a>
 
         <a
@@ -63,9 +63,6 @@ export default function Hero() {
             </a>
             <a href="https://github.com/mbrahimi25/" className="transition duration-200 hover:scale-130" target="_blank">
               <FaGithub size={25} />
-            </a>
-            <a href="https://gitlab.com/mbrahimi25/" className="transition duration-200 hover:scale-130" target="_blank">
-              <FaGitlab size={25} />
             </a>
         </div>
 
